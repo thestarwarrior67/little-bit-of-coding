@@ -20,4 +20,7 @@ with st.form("form_id"):
 
     submitted = st.form_submit_button("Submit Feedback")
     if submitted:
-        st.success(f"✅Thank you {name} for your feedback!")
+    if name and email and feedback:
+        st.success(f"✅ Thanks {name}! Your feedback has been received.")
+    else:
+        st.warning("⚠️ Please fill in all required fields (Name, Email, and Feedback).")
