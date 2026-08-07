@@ -19,8 +19,9 @@ with st.form("form_id"):
     st.caption(f"{len(feedback)}/200 characters used")
 
     submitted = st.form_submit_button("Submit Feedback")
-    if submitted:
+
+if submitted:
     if name and email and feedback:
-        st.success(f"✅ Thanks {name}! Your feedback has been received.")
+        st.success(f"Thanks {name}! Your feedback has been received.")
     else:
-        st.warning("⚠️ Please fill in all required fields (Name, Email, and Feedback).")
+        st.warning("⚠️Please fill in all required fields (Name, Email, and Feedback).")
