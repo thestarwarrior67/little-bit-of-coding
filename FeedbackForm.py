@@ -11,7 +11,7 @@ with st.form("form_id"):
         email = st.text_input("Email")
 
     with col2:
-        phone_number = st.number_input("Phone Number", max_characters=10)
+        phone_number = st.text_input("Phone Number")
         Gender = st.radio("Select your Gender", ("Male", "Female", "Other"))
         st.write(f"You Selected: {Gender}")
 
